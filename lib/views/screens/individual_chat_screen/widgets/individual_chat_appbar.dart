@@ -14,7 +14,7 @@ AppBar individualChatAppBar(BuildContext context, Chat data) {
         child: Padding(
           padding: const EdgeInsets.all(2),
           child: Row(
-            children: [
+            children: <Widget>[
               const Icon(Icons.arrow_back),
               const SizedBox(
                 width: 5,
@@ -53,7 +53,7 @@ AppBar individualChatAppBar(BuildContext context, Chat data) {
       onTap: () {},
     ),
     centerTitle: false,
-    actions: [
+    actions: <Widget>[
       IconButton(
         splashRadius: 25,
         icon: const Icon(Icons.videocam),

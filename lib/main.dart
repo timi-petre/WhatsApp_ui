@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappui/constants/app_colors.dart';
-import 'package:whatsappui/views/screens/home_screen.dart';
+import 'constants/app_colors.dart';
+import 'views/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());

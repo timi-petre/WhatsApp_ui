@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappui/views/screens/individual_chat_screen/individual_chat_screen.dart';
 
 import '../../../../constants/app_colors.dart';
 import '../../../../model/chat_model.dart';
+import '../../individual_chat_screen/individual_chat_screen.dart';
 
 class UserTile extends StatelessWidget {
   const UserTile({
@@ -14,12 +14,11 @@ class UserTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: (() => Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (BuildContext context) =>
-                  IndividualChatScreen(data: userChat),
-            ),
-          )),
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute<Widget>(
+          builder: (BuildContext context) => IndividualChatScreen(data: userChat),
+        ),
+      ),
       leading: CircleAvatar(
         radius: 28,
         backgroundColor: AppColors.kprimarySwatch,
@@ -51,19 +50,20 @@ class UserTile extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          userChat.count > 0
-              ? CircleAvatar(
-                  radius: 13,
-                  backgroundColor: Colors.green,
-                  child: Text(
-                    '${userChat.count}',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                    ),
-                  ),
-                )
-              : const SizedBox(),
+          if (userChat.count > 0)
+            CircleAvatar(
+              radius: 13,
+              backgroundColor: Colors.green,
+              child: Text(
+                '${userChat.count}',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                ),
+              ),
+            )
+          else
+            const SizedBox(),
         ],
       ),
     );

@@ -18,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
         'WhatsApp',
         style: AppColors.appBarTextTheme,
       ),
-      actions: [
+      actions: <Widget>[
         IconButton(
           splashRadius: 20,
           icon: const Icon(Icons.search),
@@ -34,9 +34,8 @@ class CustomAppBar extends StatelessWidget {
         preferredSize: const Size.fromHeight(0),
         child: AppBar(
           title: const TabBar(
-            indicatorWeight: 2,
             indicatorColor: Colors.white,
-            tabs: [
+            tabs: <Widget>[
               Tab(icon: Icon(Icons.photo_camera)),
               CustomTab(
                 name: 'chats',

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappui/views/screens/calls_screen/calls_screen.dart';
-import 'package:whatsappui/views/screens/camera_screen/camera_screen.dart';
-import 'package:whatsappui/views/screens/chat_screen/chat_screen.dart';
-import 'package:whatsappui/views/screens/status_screen/status_screen.dart';
+import 'calls_screen/calls_screen.dart';
+import 'camera_screen/camera_screen.dart';
+import 'chat_screen/chat_screen.dart';
+import 'status_screen/status_screen.dart';
 
 import 'widgets/custom_appbar.dart';
 
@@ -16,12 +16,11 @@ class HomeScreen extends StatelessWidget {
       length: 4,
       child: Scaffold(
         body: NestedScrollView(
-          headerSliverBuilder:
-              (BuildContext context, bool innerBoxIsScrolled) => [
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) => <Widget>[
             const CustomAppBar(),
           ],
           body: const TabBarView(
-            children: [
+            children: <Widget>[
               CameraScreen(),
               ChatScreen(),
               StatusScreen(),

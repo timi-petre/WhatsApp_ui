@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappui/constants/app_colors.dart';
+import '../../../constants/app_colors.dart';
 
 import '../../../model/chat_model.dart';
 import 'widgets/individual_chat_appbar.dart';
@@ -16,7 +16,7 @@ class IndividualChatScreen extends StatelessWidget {
         height: double.infinity,
         color: AppColors.ksecondaryColor,
         child: Stack(
-          children: [
+          children: <Widget>[
             Opacity(
               opacity: .3,
               child: Image.network(

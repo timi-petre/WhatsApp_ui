@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappui/model/chat_model.dart';
-import 'package:whatsappui/views/screens/chat_screen/widgets/archived.dart';
+import '../../../model/chat_model.dart';
+import 'widgets/archived.dart';
 
 import 'widgets/user_tile.dart';
 
